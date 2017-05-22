@@ -7,6 +7,6 @@ Example:
 
     This will create:
         config/locales/ja.yml
-        config/locales/translation_ja.yml
+        config/locales/translation.ja.yml
     And update:
         config/application.rb

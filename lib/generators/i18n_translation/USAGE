@@ -5,4 +5,4 @@ Example:
     % rails g i18n locale_name (ja, pt-BR, etc.)
 
     This will create:
-        config/locales/translation_ja.yml
+        config/locales/translation.ja.yml

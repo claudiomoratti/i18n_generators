@@ -37,7 +37,7 @@ This will generate following locale file.
 
 This will generate following YAML file.
 
-    config/locales/translation_ja.yml
+    config/locales/translation.ja.yml
 
 The generator scans your app/models directory, and generates a YAML file with
 all the AR model names and attributes so that you don't have to write the YAML

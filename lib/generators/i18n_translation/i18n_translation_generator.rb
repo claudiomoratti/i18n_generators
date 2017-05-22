@@ -23,7 +23,7 @@ class I18nTranslationGenerator < Rails::Generators::NamedBase
     # merge them all
     translations = model_names_translations.deep_merge order_hash(attribute_names_translations)
 
-    yaml = I27r::YamlDocument.load_yml_file "config/locales/translation_#{locale_name}.yml"
+    yaml = I27r::YamlDocument.load_yml_file "config/locales/translation.#{locale_name}.yml"
     each_value [], translations do |parents, value|
       if value.is_a?(String) || value.is_a?(Symbol)
         yaml[[locale_name.to_s] + parents] = value
@@ -35,7 +35,7 @@ class I18nTranslationGenerator < Rails::Generators::NamedBase
     end
 
     unless (yaml_string = yaml.to_s(true)).blank?
-      create_file "config/locales/translation_#{locale_name}.yml", yaml_string
+      create_file "config/locales/translation.#{locale_name}.yml", yaml_string
     end
   end
 
